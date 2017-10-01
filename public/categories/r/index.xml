@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Jeremy&#39;s Blog</title>
+    <link>http://hugo.spf13.com/categories/r/</link>
+    <description>Recent content in R on Jeremy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hugo.spf13.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SQL</title>
+      <link>http://hugo.spf13.com/post/sql/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/post/sql/</guid>
+      <description>SQL Filtering Rows and Columns
+With SQL, you can filter columns with SELECT and rows with WHERE. Let’s look at an example using the Lahman baseball database.First we need to load some packages.
+library(Lahman)library(sqldf)Suppose we want to see the homerun totals for the 1927 Yankees. We could write the following:
+query&amp;lt;-&amp;quot;SELECT playerID,yearID,teamID,HR FROM BattingWHERE teamID=&amp;#39;NYA&amp;#39;and yearID=1927&amp;quot;sqldf(query)## playerID yearID teamID HR## 1 beallwa01 1927 NYA 0## 2 bengobe01 1927 NYA 0## 3 collipa01 1927 NYA 7## 4 combsea01 1927 NYA 6## 5 duganjo01 1927 NYA 2## 6 durstce01 1927 NYA 0## 7 gazelmi01 1927 NYA 0## 8 gehrilo01 1927 NYA 47## 9 giardjo01 1927 NYA 0## 10 grabojo01 1927 NYA 0## 11 hoytwa01 1927 NYA 0## 12 koenima01 1927 NYA 3## 13 lazzeto01 1927 NYA 18## 14 meusebo01 1927 NYA 8## 15 moorewi01 1927 NYA 1## 16 morehra01 1927 NYA 1## 17 paschbe01 1927 NYA 2## 18 pennohe01 1927 NYA 0## 19 pipgrge01 1927 NYA 1## 20 ruethdu01 1927 NYA 1## 21 ruthba01 1927 NYA 60## 22 shawkbo01 1927 NYA 0## 23 shockur01 1927 NYA 0## 24 thomamy01 1927 NYA 0## 25 weraju01 1927 NYA 1In this scenario, we can filter our selection to players from the New York Yankees who have had seasons of 40 or more home runs while striking out less than 60 times, which is quite a feat.</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>http://hugo.spf13.com/blog/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/2015-07-23-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+  </channel>
+</rss>
