@@ -2,41 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SQL on Jeremy&#39;s Blog</title>
-    <link>http://hugo.spf13.com/tags/sql/</link>
+    <link>https://jeremysblog.netlify.com/tags/sql/</link>
     <description>Recent content in SQL on Jeremy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hugo.spf13.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeremysblog.netlify.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar Plots</title>
-      <link>http://hugo.spf13.com/blog/bar-plots/</link>
+      <link>https://jeremysblog.netlify.com/blog/bar-plots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/bar-plots/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/bar-plots/</guid>
       <description>Today we will be looking at bar plots and visualizing some more data!
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
     </item>
     
     <item>
       <title>Bar Plots</title>
-      <link>http://hugo.spf13.com/post/bar-plots/</link>
+      <link>https://jeremysblog.netlify.com/post/bar-plots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/post/bar-plots/</guid>
+      <guid>https://jeremysblog.netlify.com/post/bar-plots/</guid>
       <description>Today we will be looking at bar plots and visualizing some more data!
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
+library(Lahman) library(sqldf) library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)
+query&amp;lt;-&amp;quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &amp;quot; result&amp;lt;-sqldf(query) result$name&amp;lt;-factor(result$name,levels=result$name) We had to include the last line to flip the data from being ordered alphabetically to in the order we would like.</description>
     </item>
     
     <item>
       <title>Histograms</title>
-      <link>http://hugo.spf13.com/blog/histograms/</link>
+      <link>https://jeremysblog.netlify.com/blog/histograms/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/histograms/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/histograms/</guid>
       <description>Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</description>
@@ -44,41 +45,43 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     
     <item>
       <title>Histograms</title>
-      <link>http://hugo.spf13.com/post/histograms/</link>
+      <link>https://jeremysblog.netlify.com/post/histograms/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/post/histograms/</guid>
+      <guid>https://jeremysblog.netlify.com/post/histograms/</guid>
       <description>Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</description>
+library(Lahman) library(sqldf) library(ggplot2) The sql request is the following:
+query&amp;lt;-&amp;quot;SELECT weight FROM Master&amp;quot; result&amp;lt;-sqldf(query) Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.
+ggplot()+ geom_histogram(data=result,aes(x=weight),color=&amp;quot;blue&amp;quot;,fill=&amp;quot;white&amp;quot;,bins=60)+ ggtitle(&amp;quot;Distribution of Baseball Player Bodyweight&amp;quot;)+ xlab(&amp;quot;Weight of player&amp;quot;)+ ylab(&amp;quot;Number of players&amp;quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin).</description>
     </item>
     
     <item>
       <title>Time Series</title>
-      <link>http://hugo.spf13.com/blog/time-series/</link>
+      <link>https://jeremysblog.netlify.com/blog/time-series/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/time-series/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/time-series/</guid>
       <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
 The time series will give us an opportunity to see how his statistics progressed over his career.</description>
     </item>
     
     <item>
       <title>Time Series</title>
-      <link>http://hugo.spf13.com/post/time-series/</link>
+      <link>https://jeremysblog.netlify.com/post/time-series/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/post/time-series/</guid>
+      <guid>https://jeremysblog.netlify.com/post/time-series/</guid>
       <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
 The time series will give us an opportunity to see how his statistics progressed over his career.</description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>http://hugo.spf13.com/post/sql/</link>
+      <link>https://jeremysblog.netlify.com/post/sql/</link>
       <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/post/sql/</guid>
+      <guid>https://jeremysblog.netlify.com/post/sql/</guid>
       <description>SQL Filtering Rows and Columns
 With SQL, you can filter columns with SELECT and rows with WHERE. Let’s look at an example using the Lahman baseball database.First we need to load some packages.
 library(Lahman) library(sqldf) Suppose we want to see the homerun totals for the 1927 Yankees. We could write the following:

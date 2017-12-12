@@ -16,16 +16,8 @@ tags:
 <p>Next on the data visualization list, histograms!</p>
 <p>For this exercise, we will look at the weights of MLB players in the Lahman database.</p>
 <pre class="r"><code>library(Lahman)
-library(sqldf)</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
-##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
-##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
-##   Reason: image not found</code></pre>
-<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>The sql request is the following:</p>
 <pre class="r"><code>query&lt;-&quot;SELECT weight FROM Master&quot;
 result&lt;-sqldf(query)</code></pre>

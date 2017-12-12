@@ -25,13 +25,15 @@
 
         <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Bar Plots"/>
 <meta name="twitter:description" content="Today we will be looking at bar plots and visualizing some more data!
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!"/>
+library(Lahman) library(sqldf) library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)
+query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot; result&lt;-sqldf(query) result$name&lt;-factor(result$name,levels=result$name) We had to include the last line to flip the data from being ordered alphabetically to in the order we would like."/>
 
         <meta property="og:title" content="Bar Plots" />
 <meta property="og:description" content="Today we will be looking at bar plots and visualizing some more data!
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!" />
+library(Lahman) library(sqldf) library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)
+query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot; result&lt;-sqldf(query) result$name&lt;-factor(result$name,levels=result$name) We had to include the last line to flip the data from being ordered alphabetically to in the order we would like." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://hugo.spf13.com/post/bar-plots/" />
+<meta property="og:url" content="https://jeremysblog.netlify.com/post/bar-plots/" />
 
 
 
@@ -52,12 +54,13 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
         
 <meta itemprop="name" content="Bar Plots">
 <meta itemprop="description" content="Today we will be looking at bar plots and visualizing some more data!
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!">
+library(Lahman) library(sqldf) library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)
+query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot; result&lt;-sqldf(query) result$name&lt;-factor(result$name,levels=result$name) We had to include the last line to flip the data from being ordered alphabetically to in the order we would like.">
 
 
 <meta itemprop="datePublished" content="2017-12-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-12-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="224">
+<meta itemprop="wordCount" content="169">
 
 
 
@@ -133,7 +136,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="http://hugo.spf13.com/">
+                    <input type="hidden" name="as_sitesearch" value="https://jeremysblog.netlify.com">
                 </form>
             </li>
             <li class="menu">
@@ -150,7 +153,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="q" value="site:http://hugo.spf13.com/">
+                <input type="hidden" name="q" value="site:https://jeremysblog.netlify.com">
             </form>
         </section>
 
@@ -197,11 +200,11 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
 
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/bar-plots/"><p>Bar Plots</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/bar-plots/"><p>Bar Plots</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/histograms/"><p>Histograms</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/histograms/"><p>Histograms</p></a>
                     </li>
                 
             </ul>
@@ -220,43 +223,43 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&text=Bar%20Plots&via=" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&text=Bar%20Plots&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -273,7 +276,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     <header>
     <div class="title">
         
-            <h1><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h1>
+            <h1><a href="https://jeremysblog.netlify.com/post/bar-plots/">Bar Plots</a></h1>
             
         
         
@@ -286,7 +289,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
             December 12, 2017</time>
         <span class="author">Jeremy Dahl</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -299,43 +302,43 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&text=Bar%20Plots&via=" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&text=Bar%20Plots&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f&title=Bar%20Plots" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fbar-plots%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -349,16 +352,8 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     <div id="content">
         <p>Today we will be looking at bar plots and visualizing some more data!</p>
 <pre class="r"><code>library(Lahman)
-library(sqldf)</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
-##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
-##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
-##   Reason: image not found</code></pre>
-<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)</p>
 <pre class="r"><code>query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot;
 result&lt;-sqldf(query)
@@ -407,7 +402,7 @@ result$name&lt;-factor(result$name,levels=result$name)</code></pre>
 </article>
 <ul class="actions pagination">
     
-        <li><a href="http://hugo.spf13.com/post/histograms/"
+        <li><a href="https://jeremysblog.netlify.com/post/histograms/"
                 class="button big previous">Histograms</a></li>
     
 
@@ -515,7 +510,7 @@ result$name&lt;-factor(result$name,levels=result$name)</code></pre>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/bar-plots/">Bar Plots</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>
@@ -527,7 +522,7 @@ result$name&lt;-factor(result$name,levels=result$name)</code></pre>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/histograms/">Histograms</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>

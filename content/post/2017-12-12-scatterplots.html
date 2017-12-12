@@ -15,16 +15,8 @@ tags:
 <p>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!</p>
 <p>The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.</p>
 <pre class="r"><code>library(Lahman)
-library(sqldf)</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
-##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
-##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
-##   Reason: image not found</code></pre>
-<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>Then, we begin specifying exactly what we’re looking for. With this problem, we’re taking a look at players who managed to hit more than 400 homeruns and the amount of strikeouts they had.</p>
 <pre class="r"><code>query&lt;-&quot;SELECT playerID,sum(HR),sum(SO)
 FROM Batting 

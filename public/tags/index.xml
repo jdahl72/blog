@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jeremy&#39;s Blog</title>
-    <link>http://hugo.spf13.com/tags/</link>
+    <link>https://jeremysblog.netlify.com/tags/</link>
     <description>Recent content in Tags on Jeremy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hugo.spf13.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeremysblog.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar plots</title>
-      <link>http://hugo.spf13.com/tags/bar-plots/</link>
+      <link>https://jeremysblog.netlify.com/tags/bar-plots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/bar-plots/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/bar-plots/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data visualization</title>
-      <link>http://hugo.spf13.com/tags/data-visualization/</link>
+      <link>https://jeremysblog.netlify.com/tags/data-visualization/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/data-visualization/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/data-visualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Histogram</title>
-      <link>http://hugo.spf13.com/tags/histogram/</link>
+      <link>https://jeremysblog.netlify.com/tags/histogram/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/histogram/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/histogram/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plot</title>
-      <link>http://hugo.spf13.com/tags/plot/</link>
+      <link>https://jeremysblog.netlify.com/tags/plot/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/plot/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>http://hugo.spf13.com/tags/r-markdown/</link>
+      <link>https://jeremysblog.netlify.com/tags/r-markdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/r-markdown/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Regression</title>
-      <link>http://hugo.spf13.com/tags/regression/</link>
+      <link>https://jeremysblog.netlify.com/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/regression/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL</title>
-      <link>http://hugo.spf13.com/tags/sql/</link>
+      <link>https://jeremysblog.netlify.com/tags/sql/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/sql/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scatterplot</title>
-      <link>http://hugo.spf13.com/tags/scatterplot/</link>
+      <link>https://jeremysblog.netlify.com/tags/scatterplot/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/scatterplot/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/scatterplot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Time series</title>
-      <link>http://hugo.spf13.com/tags/time-series/</link>
+      <link>https://jeremysblog.netlify.com/tags/time-series/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/tags/time-series/</guid>
+      <guid>https://jeremysblog.netlify.com/tags/time-series/</guid>
       <description></description>
     </item>
     

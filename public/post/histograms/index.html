@@ -26,14 +26,18 @@
         <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Histograms"/>
 <meta name="twitter:description" content="Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead."/>
+library(Lahman) library(sqldf) library(ggplot2) The sql request is the following:
+query&lt;-&quot;SELECT weight FROM Master&quot; result&lt;-sqldf(query) Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.
+ggplot()&#43; geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)&#43; ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)&#43; xlab(&quot;Weight of player&quot;)&#43; ylab(&quot;Number of players&quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin)."/>
 
         <meta property="og:title" content="Histograms" />
 <meta property="og:description" content="Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead." />
+library(Lahman) library(sqldf) library(ggplot2) The sql request is the following:
+query&lt;-&quot;SELECT weight FROM Master&quot; result&lt;-sqldf(query) Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.
+ggplot()&#43; geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)&#43; ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)&#43; xlab(&quot;Weight of player&quot;)&#43; ylab(&quot;Number of players&quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://hugo.spf13.com/post/histograms/" />
+<meta property="og:url" content="https://jeremysblog.netlify.com/post/histograms/" />
 
 
 
@@ -55,12 +59,14 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
 <meta itemprop="name" content="Histograms">
 <meta itemprop="description" content="Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.">
+library(Lahman) library(sqldf) library(ggplot2) The sql request is the following:
+query&lt;-&quot;SELECT weight FROM Master&quot; result&lt;-sqldf(query) Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.
+ggplot()&#43; geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)&#43; ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)&#43; xlab(&quot;Weight of player&quot;)&#43; ylab(&quot;Number of players&quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin).">
 
 
 <meta itemprop="datePublished" content="2017-12-12T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2017-12-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="271">
+<meta itemprop="wordCount" content="216">
 
 
 
@@ -136,7 +142,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="http://hugo.spf13.com/">
+                    <input type="hidden" name="as_sitesearch" value="https://jeremysblog.netlify.com">
                 </form>
             </li>
             <li class="menu">
@@ -153,7 +159,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="q" value="site:http://hugo.spf13.com/">
+                <input type="hidden" name="q" value="site:https://jeremysblog.netlify.com">
             </form>
         </section>
 
@@ -200,11 +206,11 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
 
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/bar-plots/"><p>Bar Plots</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/bar-plots/"><p>Bar Plots</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/histograms/"><p>Histograms</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/histograms/"><p>Histograms</p></a>
                     </li>
                 
             </ul>
@@ -223,43 +229,43 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -276,7 +282,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     <header>
     <div class="title">
         
-            <h1><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h1>
+            <h1><a href="https://jeremysblog.netlify.com/post/histograms/">Histograms</a></h1>
             
         
         
@@ -302,43 +308,43 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
             
 
 
-<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
+<li><a href="//twitter.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
 </a></li>
 
 
-<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
+<li><a href="//plus.google.com/share?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
 </a></li>
 
 
-<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
+<li><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
 </a></li>
 
 
-<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
+<li><a href="//reddit.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
 </a></li>
 
 
-<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
+<li><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
     <i class="fa fa-linkedin"></i>
     <p>LinkedIn</p>
 </a></li>
 
 
-<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
+<li><a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
 </a></li>
 
 
-<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=https%3a%2f%2fjeremysblog.netlify.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
 </a></li>
@@ -353,16 +359,8 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
         <p>Next on the data visualization list, histograms!</p>
 <p>For this exercise, we will look at the weights of MLB players in the Lahman database.</p>
 <pre class="r"><code>library(Lahman)
-library(sqldf)</code></pre>
-<pre><code>## Loading required package: gsubfn</code></pre>
-<pre><code>## Loading required package: proto</code></pre>
-<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
-##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
-##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
-##   Reason: image not found</code></pre>
-<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
-<pre><code>## Loading required package: RSQLite</code></pre>
-<pre class="r"><code>library(ggplot2)</code></pre>
+library(sqldf)
+library(ggplot2)</code></pre>
 <p>The sql request is the following:</p>
 <pre class="r"><code>query&lt;-&quot;SELECT weight FROM Master&quot;
 result&lt;-sqldf(query)</code></pre>
@@ -424,12 +422,12 @@ result&lt;-sqldf(query)</code></pre>
 </article>
 <ul class="actions pagination">
     
-        <li><a href="http://hugo.spf13.com/post/scatterplots/"
+        <li><a href="https://jeremysblog.netlify.com/post/scatterplots/"
                 class="button big previous">Scatterplots</a></li>
     
 
     
-        <li><a href="http://hugo.spf13.com/post/bar-plots/"
+        <li><a href="https://jeremysblog.netlify.com/post/bar-plots/"
                 class="button big next">Bar Plots</a></li>
     
 </ul>
@@ -535,7 +533,7 @@ result&lt;-sqldf(query)</code></pre>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/bar-plots/">Bar Plots</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>
@@ -547,7 +545,7 @@ result&lt;-sqldf(query)</code></pre>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/histograms/">Histograms</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>

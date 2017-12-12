@@ -33,7 +33,7 @@
         <meta property="og:title" content="Post" />
 <meta property="og:description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://hugo.spf13.com/post/" />
+<meta property="og:url" content="https://jeremysblog.netlify.com/post/" />
 
 
 
@@ -118,7 +118,7 @@
                 <a class="fa-search" href="#search">Search</a>
                 <form id="search" method="get" action="//google.com/search">
                     <input type="text" name="q" placeholder="Search" />
-                    <input type="hidden" name="as_sitesearch" value="http://hugo.spf13.com/">
+                    <input type="hidden" name="as_sitesearch" value="https://jeremysblog.netlify.com">
                 </form>
             </li>
             <li class="menu">
@@ -135,7 +135,7 @@
         <section>
             <form class="search" method="get" action="//google.com/search">
                 <input type="text" name="q" placeholder="Search" />
-                <input type="hidden" name="q" value="site:http://hugo.spf13.com/">
+                <input type="hidden" name="q" value="site:https://jeremysblog.netlify.com">
             </form>
         </section>
 
@@ -182,11 +182,11 @@
 
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/bar-plots/"><p>Bar Plots</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/bar-plots/"><p>Bar Plots</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/histograms/"><p>Histograms</p></a>
+                        <a href="https://jeremysblog.netlify.com/post/histograms/"><p>Histograms</p></a>
                     </li>
                 
             </ul>
@@ -204,7 +204,7 @@
     <header>
     <div class="title">
         
-            <h2><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h2>
+            <h2><a href="https://jeremysblog.netlify.com/post/bar-plots/">Bar Plots</a></h2>
         
         
     </div>
@@ -216,7 +216,7 @@
             December 12, 2017</time>
         <span class="author">Jeremy Dahl</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -225,11 +225,12 @@
     
 
     <p>Today we will be looking at bar plots and visualizing some more data!
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</p>
+library(Lahman) library(sqldf) library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)
+query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot; result&lt;-sqldf(query) result$name&lt;-factor(result$name,levels=result$name) We had to include the last line to flip the data from being ordered alphabetically to in the order we would like.</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://hugo.spf13.com/post/bar-plots/" class="button big">Continue Reading</a></li>
+            <li><a href="https://jeremysblog.netlify.com/post/bar-plots/" class="button big">Continue Reading</a></li>
         </ul>
         <ul class="stats">
     
@@ -264,7 +265,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     <header>
     <div class="title">
         
-            <h2><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h2>
+            <h2><a href="https://jeremysblog.netlify.com/post/histograms/">Histograms</a></h2>
         
         
     </div>
@@ -286,11 +287,13 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
 
     <p>Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</p>
+library(Lahman) library(sqldf) library(ggplot2) The sql request is the following:
+query&lt;-&quot;SELECT weight FROM Master&quot; result&lt;-sqldf(query) Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.
+ggplot()+ geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)+ ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+ xlab(&quot;Weight of player&quot;)+ ylab(&quot;Number of players&quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin).</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://hugo.spf13.com/post/histograms/" class="button big">Continue Reading</a></li>
+            <li><a href="https://jeremysblog.netlify.com/post/histograms/" class="button big">Continue Reading</a></li>
         </ul>
         <ul class="stats">
     
@@ -325,7 +328,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     <header>
     <div class="title">
         
-            <h2><a href="http://hugo.spf13.com/post/scatterplots/">Scatterplots</a></h2>
+            <h2><a href="https://jeremysblog.netlify.com/post/scatterplots/">Scatterplots</a></h2>
         
         
     </div>
@@ -347,11 +350,11 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
 
     <p>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</p>
+library(Lahman) library(sqldf) library(ggplot2) Then, we begin specifying exactly what we’re looking for. With this problem, we’re taking a look at players who managed to hit more than 400 homeruns and the amount of strikeouts they had.</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://hugo.spf13.com/post/scatterplots/" class="button big">Continue Reading</a></li>
+            <li><a href="https://jeremysblog.netlify.com/post/scatterplots/" class="button big">Continue Reading</a></li>
         </ul>
         <ul class="stats">
     
@@ -492,7 +495,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/bar-plots/">Bar Plots</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>
@@ -504,7 +507,7 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h3>
+                                <h3><a href="https://jeremysblog.netlify.com/post/histograms/">Histograms</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2017-12-12'>

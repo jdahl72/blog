@@ -3,220 +3,220 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://hugo.spf13.com/blog/bar-plots/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/bar-plots/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/bar-plots/</loc>
+    <loc>https://jeremysblog.netlify.com/post/bar-plots/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/histograms/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/histograms/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/histograms/</loc>
+    <loc>https://jeremysblog.netlify.com/post/histograms/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/scatterplots/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/scatterplots/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/scatterplots/</loc>
+    <loc>https://jeremysblog.netlify.com/post/scatterplots/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/time-series/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/time-series/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/time-series/</loc>
+    <loc>https://jeremysblog.netlify.com/post/time-series/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/sql/</loc>
+    <loc>https://jeremysblog.netlify.com/post/sql/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/itemized/item1/</loc>
+    <loc>https://jeremysblog.netlify.com/itemized/item1/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/itemized/item2/</loc>
+    <loc>https://jeremysblog.netlify.com/itemized/item2/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/itemized/item3/</loc>
+    <loc>https://jeremysblog.netlify.com/itemized/item3/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/itemized/item4/</loc>
+    <loc>https://jeremysblog.netlify.com/itemized/item4/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/2015-07-23-r-rmarkdown/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/creating-a-new-theme/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/creating-a-new-theme/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/about/</loc>
+    <loc>https://jeremysblog.netlify.com/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/goisforlovers/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/goisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/hugoisforlovers/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/hugoisforlovers/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/migrate-from-jekyll/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/bar-plots/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/bar-plots/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/blog/</loc>
+    <loc>https://jeremysblog.netlify.com/blog/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/contact/</loc>
+    <loc>https://jeremysblog.netlify.com/contact/</loc>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/data-visualization/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/data-visualization/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/go/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/histogram/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/histogram/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/hugo/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/hugo/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/itemized/</loc>
+    <loc>https://jeremysblog.netlify.com/itemized/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/jekyll/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/</loc>
+    <loc>https://jeremysblog.netlify.com/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/plot/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/post/</loc>
+    <loc>https://jeremysblog.netlify.com/post/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/categories/r/</loc>
+    <loc>https://jeremysblog.netlify.com/categories/r/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/r-markdown/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/regression/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/sql/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/sql/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/scatterplot/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/scatterplot/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hugo.spf13.com/tags/time-series/</loc>
+    <loc>https://jeremysblog.netlify.com/tags/time-series/</loc>
     <lastmod>2017-12-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Jeremy&#39;s Blog</title>
-    <link>http://hugo.spf13.com/blog/</link>
+    <link>https://jeremysblog.netlify.com/blog/</link>
     <description>Recent content in Blog on Jeremy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hugo.spf13.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeremysblog.netlify.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar Plots</title>
-      <link>http://hugo.spf13.com/blog/bar-plots/</link>
+      <link>https://jeremysblog.netlify.com/blog/bar-plots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/bar-plots/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/bar-plots/</guid>
       <description>Today we will be looking at bar plots and visualizing some more data!
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
     </item>
     
     <item>
       <title>Histograms</title>
-      <link>http://hugo.spf13.com/blog/histograms/</link>
+      <link>https://jeremysblog.netlify.com/blog/histograms/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/histograms/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/histograms/</guid>
       <description>Next on the data visualization list, histograms!
 For this exercise, we will look at the weights of MLB players in the Lahman database.
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</description>
@@ -34,10 +34,10 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     
     <item>
       <title>Scatterplots</title>
-      <link>http://hugo.spf13.com/blog/scatterplots/</link>
+      <link>https://jeremysblog.netlify.com/blog/scatterplots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/scatterplots/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/scatterplots/</guid>
       <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
@@ -45,20 +45,20 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     
     <item>
       <title>Time Series</title>
-      <link>http://hugo.spf13.com/blog/time-series/</link>
+      <link>https://jeremysblog.netlify.com/blog/time-series/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/time-series/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/time-series/</guid>
       <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
 The time series will give us an opportunity to see how his statistics progressed over his career.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>http://hugo.spf13.com/blog/2015-07-23-r-rmarkdown/</link>
+      <link>https://jeremysblog.netlify.com/blog/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/2015-07-23-r-rmarkdown/</guid>
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
@@ -66,30 +66,30 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     
     <item>
       <title>Creating a New Theme</title>
-      <link>http://hugo.spf13.com/blog/creating-a-new-theme/</link>
+      <link>https://jeremysblog.netlify.com/blog/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/creating-a-new-theme/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>http://hugo.spf13.com/blog/goisforlovers/</link>
+      <link>https://jeremysblog.netlify.com/blog/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/goisforlovers/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/goisforlovers/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates.</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>http://hugo.spf13.com/blog/hugoisforlovers/</link>
+      <link>https://jeremysblog.netlify.com/blog/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/hugoisforlovers/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/hugoisforlovers/</guid>
       <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
 
 &lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
@@ -97,16 +97,16 @@ appropriate version for your os and architecture.&lt;/p&gt;
 
 &lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
 
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;http://hugo.spf13.com/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;
+&lt;p&gt;More complete instructions are available at &lt;a href=&#34;https://jeremysblog.netlify.com/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;
 &lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Migrate to Hugo from Jekyll</title>
-      <link>http://hugo.spf13.com/blog/migrate-from-jekyll/</link>
+      <link>https://jeremysblog.netlify.com/blog/migrate-from-jekyll/</link>
       <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/migrate-from-jekyll/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/migrate-from-jekyll/</guid>
       <description>&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scatterplot on Jeremy&#39;s Blog</title>
-    <link>http://hugo.spf13.com/tags/scatterplot/</link>
+    <link>https://jeremysblog.netlify.com/tags/scatterplot/</link>
     <description>Recent content in Scatterplot on Jeremy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://hugo.spf13.com/tags/scatterplot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jeremysblog.netlify.com/tags/scatterplot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Scatterplots</title>
-      <link>http://hugo.spf13.com/blog/scatterplots/</link>
+      <link>https://jeremysblog.netlify.com/blog/scatterplots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/blog/scatterplots/</guid>
+      <guid>https://jeremysblog.netlify.com/blog/scatterplots/</guid>
       <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
@@ -24,13 +24,13 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     
     <item>
       <title>Scatterplots</title>
-      <link>http://hugo.spf13.com/post/scatterplots/</link>
+      <link>https://jeremysblog.netlify.com/post/scatterplots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://hugo.spf13.com/post/scatterplots/</guid>
+      <guid>https://jeremysblog.netlify.com/post/scatterplots/</guid>
       <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
-library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
+library(Lahman) library(sqldf) library(ggplot2) Then, we begin specifying exactly what we’re looking for. With this problem, we’re taking a look at players who managed to hit more than 400 homeruns and the amount of strikeouts they had.</description>
     </item>
     
   </channel>

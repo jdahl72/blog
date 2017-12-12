@@ -14,7 +14,7 @@ Using the Lahman database, we're going to look at homerun and strikeout statisti
 
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
 
-```{r}
+```{r warning=FALSE,message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
