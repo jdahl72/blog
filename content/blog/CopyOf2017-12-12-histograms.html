@@ -36,7 +36,7 @@ result&lt;-sqldf(query)</code></pre>
   xlab(&quot;Weight of player&quot;)+
   ylab(&quot;Number of players&quot;)</code></pre>
 <pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/blog/CopyOf2017-12-12-histograms_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>While there are more commands needed compared to scatterplot, such as geom_histogram and the bins, you can see they are very similar!</p>
 <pre class="r"><code>ggplot()+
   geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=10)+
@@ -44,7 +44,7 @@ result&lt;-sqldf(query)</code></pre>
   xlab(&quot;Weight of player&quot;)+
   ylab(&quot;Number of players&quot;)</code></pre>
 <pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/blog/CopyOf2017-12-12-histograms_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>To show you how bins alter our results, the above is an example with 10 bins, and the one below has 100!</p>
 <pre class="r"><code>ggplot()+
   geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=100)+
@@ -52,5 +52,5 @@ result&lt;-sqldf(query)</code></pre>
   xlab(&quot;Weight of player&quot;)+
   ylab(&quot;Number of players&quot;)</code></pre>
 <pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/blog/CopyOf2017-12-12-histograms_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Don’t get too discouraged we didn’t look only at the Yankees, but come back next time and maybe we’ll be lucky enough to check out some more statistics from the best team in the MLB! (Maybe we can take a look at how good they’ll be with the addition of Gincarlo Stanton!)</p>

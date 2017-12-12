@@ -13,6 +13,17 @@
     
     <item>
       <title>Scatterplots</title>
+      <link>http://hugo.spf13.com/blog/scatterplots/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/scatterplots/</guid>
+      <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
+The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
+    </item>
+    
+    <item>
+      <title>Scatterplots</title>
       <link>http://hugo.spf13.com/post/scatterplots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       

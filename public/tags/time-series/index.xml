@@ -13,6 +13,16 @@
     
     <item>
       <title>Time Series</title>
+      <link>http://hugo.spf13.com/blog/time-series/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/time-series/</guid>
+      <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
+The time series will give us an opportunity to see how his statistics progressed over his career.</description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
       <link>http://hugo.spf13.com/post/time-series/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       

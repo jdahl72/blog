@@ -13,12 +13,33 @@
     
     <item>
       <title>Bar Plots</title>
+      <link>http://hugo.spf13.com/blog/bar-plots/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/bar-plots/</guid>
+      <description>Today we will be looking at bar plots and visualizing some more data!
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
+    </item>
+    
+    <item>
+      <title>Bar Plots</title>
       <link>http://hugo.spf13.com/post/bar-plots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://hugo.spf13.com/post/bar-plots/</guid>
       <description>Today we will be looking at bar plots and visualizing some more data!
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
+    </item>
+    
+    <item>
+      <title>Histograms</title>
+      <link>http://hugo.spf13.com/blog/histograms/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/histograms/</guid>
+      <description>Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</description>
     </item>
     
     <item>
@@ -34,6 +55,17 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
     
     <item>
       <title>Scatterplots</title>
+      <link>http://hugo.spf13.com/blog/scatterplots/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/scatterplots/</guid>
+      <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
+The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
+    </item>
+    
+    <item>
+      <title>Scatterplots</title>
       <link>http://hugo.spf13.com/post/scatterplots/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
@@ -41,6 +73,16 @@ library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading re
       <description>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
 The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
 library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>http://hugo.spf13.com/blog/time-series/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/blog/time-series/</guid>
+      <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
+The time series will give us an opportunity to see how his statistics progressed over his career.</description>
     </item>
     
     <item>
