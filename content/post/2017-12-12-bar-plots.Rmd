@@ -13,7 +13,7 @@ tags:
 
 Today we will be looking at bar plots and visualizing some more data!
 
-```{r}
+```{r warning=FALSE,message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)

@@ -15,7 +15,7 @@ Next on the data visualization list, histograms!
 
 For this exercise, we will look at the weights of MLB players in the Lahman database. 
 
-```{r}
+```{r warning=FALSE,message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)

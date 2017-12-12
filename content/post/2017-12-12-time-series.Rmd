@@ -15,7 +15,7 @@ Just like last time, we will be taking a look at data visualization! Thankfully,
 
 The time series will give us an opportunity to see how his statistics progressed over his career. 
 
-```{r}
+```{r warning=FALSE,message=FALSE}
 library(Lahman)
 library(sqldf)
 library(ggplot2)
