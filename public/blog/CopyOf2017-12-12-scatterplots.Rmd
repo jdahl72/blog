@@ -1,0 +1,55 @@
+---
+title: Scatterplots
+author: Jeremy Dahl
+date: '2017-12-12'
+slug: scatterplots
+categories:
+  - R
+tags:
+  - data visualization
+  - scatterplot
+---
+
+Using the Lahman database, we're going to look at homerun and strikeout statistics to make a scatterplot!
+
+The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+Then, we begin specifying exactly what we're looking for. With this problem, we're taking a look at players who managed to hit more than 400 homeruns and the amount of strikeouts they had.
+
+```{r}
+query<-"SELECT playerID,sum(HR),sum(SO)
+FROM Batting 
+GROUP BY playerID
+HAVING sum(HR)>400"
+sqldf(query)
+```
+
+Now that we have the information, we will begin to visualize this data.
+
+```{r}
+query<-"SELECT playerID,sum(HR) AS CareerHR,sum(SO) AS CareerSO
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)>400"
+result<-sqldf(query)
+```
+
+Homeruns will be on the y-axis and strikeouts will be on the x-axis and a title is added as well. 
+
+```{r}
+ggplot()+
+geom_point(data=result,aes(x=CareerSO,y=CareerHR),size=3)+
+ggtitle("Career Strikeouts and Homeruns")+
+xlab("Career Strikeouts")+
+ylab("Career Homeruns")
+```
+
+Using ggplot2, we were able to create this beautiful graph displaying data from all-time greats in MLB, so cheers to that!
+
+See ya next time!
