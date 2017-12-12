@@ -1,0 +1,42 @@
+---
+title: Bar Plots
+author: Jeremy Dahl
+date: '2017-12-12'
+slug: bar-plots
+categories:
+  - R
+tags:
+  - data visualization
+  - SQL
+  - bar plots
+---
+
+
+
+<p>Today we will be looking at bar plots and visualizing some more data!</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)</code></pre>
+<pre><code>## Loading required package: gsubfn</code></pre>
+<pre><code>## Loading required package: proto</code></pre>
+<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
+##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
+##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
+##   Reason: image not found</code></pre>
+<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
+<pre><code>## Loading required package: RSQLite</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!)</p>
+<pre class="r"><code>query&lt;-&quot;SELECT name,HR FROM Teams WHERE yearID=1980 ORDER BY HR &quot;
+result&lt;-sqldf(query)
+
+result$name&lt;-factor(result$name,levels=result$name)</code></pre>
+<p>We had to include the last line to flip the data from being ordered alphabetically to in the order we would like.</p>
+<pre class="r"><code>ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;)+
+  coord_flip()+
+  ggtitle(&quot;1980 Team Homerun Totals&quot;)+
+  xlab(&quot;Team Name&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-12-12-bar-plots_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Similarly to past exercises, we were able to use ggplot2 to create the map and all of the labels and the title. Several of the distances between the bar plot and other graphs is that we have to specify it to be a bar plot with geom_bar, and we have to include stat=‘identity’. We were able to make the bars horizontal by using the coord_flip() request.</p>
+<p>Thanks for taking a look at my data visualization journey! Go Yankees!</p>

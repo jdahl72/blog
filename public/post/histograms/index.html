@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Histograms</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.31.1" />
+        
+
+
+        
+            <meta name="author" content="Jeremy Dahl">
+        
+        
+            
+                <meta name="description" content="HTML5 UP theme, Future Imperfect with some extra goodies, ported by Julio Pescador. Powered by Hugo">
+            
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Histograms"/>
+<meta name="twitter:description" content="Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead."/>
+
+        <meta property="og:title" content="Histograms" />
+<meta property="og:description" content="Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hugo.spf13.com/post/histograms/" />
+
+
+
+<meta property="article:published_time" content="2017-12-12T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2017-12-12T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Histograms">
+<meta itemprop="description" content="Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.">
+
+
+<meta itemprop="datePublished" content="2017-12-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-12-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="271">
+
+
+
+<meta itemprop="keywords" content="data visualization,SQL,histogram," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+        
+
+        
+
+        
+            
+        
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      
+          <h1><a href="/">post</a></h1>
+      
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="http://hugo.spf13.com/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://hugo.spf13.com/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://hugo.spf13.com/post/bar-plots/"><p>Bar Plots</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://hugo.spf13.com/post/histograms/"><p>Histograms</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-12-12'>
+            December 12, 2017</time>
+        <span class="author">Jeremy Dahl</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&text=Histograms&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f&title=Histograms" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by Jeremy%20Dahl&body=http%3a%2f%2fhugo.spf13.com%2fpost%2fhistograms%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    
+
+    <div id="content">
+        <p>Next on the data visualization list, histograms!</p>
+<p>For this exercise, we will look at the weights of MLB players in the Lahman database.</p>
+<pre class="r"><code>library(Lahman)
+library(sqldf)</code></pre>
+<pre><code>## Loading required package: gsubfn</code></pre>
+<pre><code>## Loading required package: proto</code></pre>
+<pre><code>## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;:
+##   dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib
+##   Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so
+##   Reason: image not found</code></pre>
+<pre><code>## Could not load tcltk.  Will use slower R code instead.</code></pre>
+<pre><code>## Loading required package: RSQLite</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>The sql request is the following:</p>
+<pre class="r"><code>query&lt;-&quot;SELECT weight FROM Master&quot;
+result&lt;-sqldf(query)</code></pre>
+<p>Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2.</p>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=60)+
+  ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+
+  xlab(&quot;Weight of player&quot;)+
+  ylab(&quot;Number of players&quot;)</code></pre>
+<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>While there are more commands needed compared to scatterplot, such as geom_histogram and the bins, you can see they are very similar!</p>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=10)+
+  ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+
+  xlab(&quot;Weight of player&quot;)+
+  ylab(&quot;Number of players&quot;)</code></pre>
+<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>To show you how bins alter our results, the above is an example with 10 bins, and the one below has 100!</p>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;blue&quot;,fill=&quot;white&quot;,bins=100)+
+  ggtitle(&quot;Distribution of Baseball Player Bodyweight&quot;)+
+  xlab(&quot;Weight of player&quot;)+
+  ylab(&quot;Number of players&quot;)</code></pre>
+<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-12-12-histograms_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Don’t get too discouraged we didn’t look only at the Yankees, but come back next time and maybe we’ll be lucky enough to check out some more statistics from the best team in the MLB! (Maybe we can take a look at how good they’ll be with the addition of Gincarlo Stanton!)</p>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/r'>R</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://hugo.spf13.com/post/scatterplots/"
+                class="button big previous">Scatterplots</a></li>
+    
+
+    
+        <li><a href="http://hugo.spf13.com/post/bar-plots/"
+                class="button big next">Bar Plots</a></li>
+    
+</ul>
+
+
+
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/main/logo.jpg" alt="Jeremy&#39;s Blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>Jeremy&#39;s Blog</h2>
+                    <p>A look into the life of a Mercyhurst University Intelligence Studies student</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/jdahl72" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:jdahl72@lakers.mercyhurst.edu" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-12-12'>
+                                    December 12, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2017-12-12'>
+                                    December 12, 2017</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /blog/
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/r/">R</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories//"></a>
+                                <span style="float:right;">4</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hugo/">Hugo</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/go/">Go</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/jekyll/">Jekyll</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/jdahl72" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:jdahl72@lakers.mercyhurst.edu" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; 2017 Jeremy&#39;s Blog. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+      </div>
+      <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+      
+
+      
+        
+      
+
+      
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
+        <script src="/js/util.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/backToTop.js"></script>
+      
+
+      
+
+      
+      <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
+

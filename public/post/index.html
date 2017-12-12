@@ -16,7 +16,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.29" />
+        <meta name="generator" content="Hugo 0.31.1" />
         
 
 
@@ -37,7 +37,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-10-01T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-12-12T00:00:00&#43;00:00"/>
 
 
 
@@ -182,11 +182,11 @@
 
                 
                     <li>
-                        <a href="http://hugo.spf13.com/post/sql/"><p>SQL</p></a>
+                        <a href="http://hugo.spf13.com/post/bar-plots/"><p>Bar Plots</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://hugo.spf13.com/blog/creating-a-new-theme/"><p>Creating a New Theme</p></a>
+                        <a href="http://hugo.spf13.com/post/histograms/"><p>Histograms</p></a>
                     </li>
                 
             </ul>
@@ -204,7 +204,7 @@
     <header>
     <div class="title">
         
-            <h2><a href="http://hugo.spf13.com/post/sql/">SQL</a></h2>
+            <h2><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h2>
         
         
     </div>
@@ -212,8 +212,129 @@
         
 
         <time class="published"
-            datetime='2017-10-01'>
-            October 1, 2017</time>
+            datetime='2017-12-12'>
+            December 12, 2017</time>
+        <span class="author">Jeremy Dahl</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+
+    <p>Today we will be looking at bar plots and visualizing some more data!
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://hugo.spf13.com/post/bar-plots/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/r'>R</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h2>
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-12-12'>
+            December 12, 2017</time>
+        <span class="author">Jeremy Dahl</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+
+    <p>Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://hugo.spf13.com/post/histograms/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categories/r'>R</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+        
+            <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://hugo.spf13.com/post/scatterplots/">Scatterplots</a></h2>
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2017-12-12'>
+            December 12, 2017</time>
         <span class="author">Jeremy Dahl</span>
         
             <p>3 minute read</p>
@@ -224,73 +345,13 @@
 
     
 
-    <p><p>SQL Filtering Rows and Columns
-With SQL, you can filter columns with SELECT and rows with WHERE. Let’s look at an example using the Lahman baseball database.First we need to load some packages.
-library(Lahman)
-library(sqldf)
-Suppose we want to see the homerun totals for the 1927 Yankees. We could write the following:
-query&lt;-&quot;SELECT playerID,yearID,teamID,HR FROM Batting
-WHERE teamID=&#39;NYA&#39;and yearID=1927&quot;
-sqldf(query)</p>
-
-<h2 id="playerid-yearid-teamid-hr">playerID yearID teamID HR</h2>
-
-<h2 id="1-beallwa01-1927-nya-0">1 beallwa01 1927 NYA 0</h2>
-
-<h2 id="2-bengobe01-1927-nya-0">2 bengobe01 1927 NYA 0</h2>
-
-<h2 id="3-collipa01-1927-nya-7">3 collipa01 1927 NYA 7</h2>
-
-<h2 id="4-combsea01-1927-nya-6">4 combsea01 1927 NYA 6</h2>
-
-<h2 id="5-duganjo01-1927-nya-2">5 duganjo01 1927 NYA 2</h2>
-
-<h2 id="6-durstce01-1927-nya-0">6 durstce01 1927 NYA 0</h2>
-
-<h2 id="7-gazelmi01-1927-nya-0">7 gazelmi01 1927 NYA 0</h2>
-
-<h2 id="8-gehrilo01-1927-nya-47">8 gehrilo01 1927 NYA 47</h2>
-
-<h2 id="9-giardjo01-1927-nya-0">9 giardjo01 1927 NYA 0</h2>
-
-<h2 id="10-grabojo01-1927-nya-0">10 grabojo01 1927 NYA 0</h2>
-
-<h2 id="11-hoytwa01-1927-nya-0">11 hoytwa01 1927 NYA 0</h2>
-
-<h2 id="12-koenima01-1927-nya-3">12 koenima01 1927 NYA 3</h2>
-
-<h2 id="13-lazzeto01-1927-nya-18">13 lazzeto01 1927 NYA 18</h2>
-
-<h2 id="14-meusebo01-1927-nya-8">14 meusebo01 1927 NYA 8</h2>
-
-<h2 id="15-moorewi01-1927-nya-1">15 moorewi01 1927 NYA 1</h2>
-
-<h2 id="16-morehra01-1927-nya-1">16 morehra01 1927 NYA 1</h2>
-
-<h2 id="17-paschbe01-1927-nya-2">17 paschbe01 1927 NYA 2</h2>
-
-<h2 id="18-pennohe01-1927-nya-0">18 pennohe01 1927 NYA 0</h2>
-
-<h2 id="19-pipgrge01-1927-nya-1">19 pipgrge01 1927 NYA 1</h2>
-
-<h2 id="20-ruethdu01-1927-nya-1">20 ruethdu01 1927 NYA 1</h2>
-
-<h2 id="21-ruthba01-1927-nya-60">21 ruthba01 1927 NYA 60</h2>
-
-<h2 id="22-shawkbo01-1927-nya-0">22 shawkbo01 1927 NYA 0</h2>
-
-<h2 id="23-shockur01-1927-nya-0">23 shockur01 1927 NYA 0</h2>
-
-<h2 id="24-thomamy01-1927-nya-0">24 thomamy01 1927 NYA 0</h2>
-
-<h2 id="25-weraju01-1927-nya-1">25 weraju01 1927 NYA 1</h2>
-
-<p>In this scenario, we can filter our selection to players from the New York Yankees who have had seasons of 40 or more home runs while striking out less than 60 times, which is quite a feat.</p>
-</p>
+    <p>Using the Lahman database, we’re going to look at homerun and strikeout statistics to make a scatterplot!
+The first thing we do is download the libraries needed so we can get our data and the tools necessary to visualize this data.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.</p>
 
     <footer>
         <ul class="actions">
-            <li><a href="http://hugo.spf13.com/post/sql/" class="button big">Continue Reading</a></li>
+            <li><a href="http://hugo.spf13.com/post/scatterplots/" class="button big">Continue Reading</a></li>
         </ul>
         <ul class="stats">
     
@@ -329,7 +390,8 @@ sqldf(query)</p>
     
 
     
-        <li><a href="#" class="disabled button big next">Next Page</a></li>
+        <li><a href="/post/page/2/"
+                class="button big next">Next Page</a></li>
     
 </ul>
 
@@ -430,11 +492,11 @@ sqldf(query)</p>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/post/sql/">SQL</a></h3>
+                                <h3><a href="http://hugo.spf13.com/post/bar-plots/">Bar Plots</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2017-10-01'>
-                                    October 1, 2017</time>
+                                    '2017-12-12'>
+                                    December 12, 2017</time>
                             </header>
                         </article>
                     </li>
@@ -442,11 +504,11 @@ sqldf(query)</p>
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://hugo.spf13.com/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
+                                <h3><a href="http://hugo.spf13.com/post/histograms/">Histograms</a></h3>
                                 
                                 <time class="published" datetime=
-                                    '2014-09-28'>
-                                    September 28, 2014</time>
+                                    '2017-12-12'>
+                                    December 12, 2017</time>
                             </header>
                         </article>
                     </li>
@@ -484,6 +546,15 @@ sqldf(query)</p>
                     <li>
                         <article>
                             <header>
+                                <a href="/categories/r/">R</a>
+                                <span style="float:right;">6</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <a href="/categories//"></a>
                                 <span style="float:right;">4</span>
                             </header>
@@ -495,15 +566,6 @@ sqldf(query)</p>
                             <header>
                                 <a href="/categories/hugo/">Hugo</a>
                                 <span style="float:right;">3</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/r/">R</a>
-                                <span style="float:right;">2</span>
                             </header>
                         </article>
                     </li>

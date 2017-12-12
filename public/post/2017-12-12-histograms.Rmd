@@ -1,0 +1,61 @@
+---
+title: Histograms
+author: Jeremy Dahl
+date: '2017-12-12'
+slug: histograms
+categories:
+  - R
+tags:
+  - data visualization
+  - SQL
+  - histogram
+---
+
+Next on the data visualization list, histograms!
+
+For this exercise, we will look at the weights of MLB players in the Lahman database. 
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+The sql request is the following:
+
+```{r}
+query<-"SELECT weight FROM Master"
+result<-sqldf(query)
+```
+
+Similarly to a scatterplot, we can create all the labels and title all at once using ggplot2. 
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=60)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+```
+
+While there are more commands needed compared to scatterplot, such as geom_histogram and the bins, you can see they are very similar!
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=10)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+```
+
+To show you how bins alter our results, the above is an example with 10 bins, and the one below has 100!
+
+```{r}
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=100)+
+  ggtitle("Distribution of Baseball Player Bodyweight")+
+  xlab("Weight of player")+
+  ylab("Number of players")
+```
+
+Don't get too discouraged we didn't look only at the Yankees, but come back next time and maybe we'll be lucky enough to check out some more statistics from the best team in the MLB! (Maybe we can take a look at how good they'll be with the addition of Gincarlo Stanton!)

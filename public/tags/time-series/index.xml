@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time series on Jeremy&#39;s Blog</title>
+    <link>http://hugo.spf13.com/tags/time-series/</link>
+    <description>Recent content in Time series on Jeremy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hugo.spf13.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Time Series</title>
+      <link>http://hugo.spf13.com/post/time-series/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/post/time-series/</guid>
+      <description>Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we’ll have to include his statistics as a member of the Red Sox, but we’ll have to look over that)
+The time series will give us an opportunity to see how his statistics progressed over his career.</description>
+    </item>
+    
+  </channel>
+</rss>

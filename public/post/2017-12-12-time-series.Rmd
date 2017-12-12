@@ -1,0 +1,42 @@
+---
+title: Time Series
+author: Jeremy Dahl
+date: '2017-12-12'
+slug: time-series
+categories:
+  - R
+tags:
+  - SQL
+  - data visualization
+  - time series
+---
+
+Just like last time, we will be taking a look at data visualization! Thankfully, this time we will be focusing on perhaps the best baseball player of all time on the best team of all time: Babe Ruth of the New York Yankees! (Unfortunately we'll have to include his statistics as a member of the Red Sox, but we'll have to look over that)
+
+The time series will give us an opportunity to see how his statistics progressed over his career. 
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+To look at Babe Ruth’s homeruns over his twenty-two seasons, we use this sql request: 
+
+```{r}
+query<-"SELECT yearID,HR FROM Batting WHERE playerID='ruthba01'"
+result<-sqldf(query)
+```
+
+Next, it is time for the visualization! The time series is similar to the scatterplot, except with this we'll be able to see a line that will connect the points together that will help identify the progress over time!
+
+```{r}
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR),size=1/2)+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Babe Ruth's, aka The GOAT, Homeruns by Year")+
+  xlab("Year")+
+  ylab("Number of Homeruns")
+```
+
+It's always a fun time to look into the past at Yankees legends, so hopefully you'll join me again and hopefully we'll be able to take another look into the New York Yankees! 

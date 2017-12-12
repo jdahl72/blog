@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Histogram on Jeremy&#39;s Blog</title>
+    <link>http://hugo.spf13.com/tags/histogram/</link>
+    <description>Recent content in Histogram on Jeremy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hugo.spf13.com/tags/histogram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Histograms</title>
+      <link>http://hugo.spf13.com/post/histograms/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/post/histograms/</guid>
+      <description>Next on the data visualization list, histograms!
+For this exercise, we will look at the weights of MLB players in the Lahman database.
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead.</description>
+    </item>
+    
+  </channel>
+</rss>

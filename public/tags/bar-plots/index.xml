@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bar plots on Jeremy&#39;s Blog</title>
+    <link>http://hugo.spf13.com/tags/bar-plots/</link>
+    <description>Recent content in Bar plots on Jeremy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://hugo.spf13.com/tags/bar-plots/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bar Plots</title>
+      <link>http://hugo.spf13.com/post/bar-plots/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/post/bar-plots/</guid>
+      <description>Today we will be looking at bar plots and visualizing some more data!
+library(Lahman) library(sqldf) ## Loading required package: gsubfn ## Loading required package: proto ## Warning in doTryCatch(return(expr), name, parentenv, handler): unable to load shared object &amp;#39;/Library/Frameworks/R.framework/Resources/modules//R_X11.so&amp;#39;: ## dlopen(/Library/Frameworks/R.framework/Resources/modules//R_X11.so, 6): Library not loaded: /opt/X11/lib/libSM.6.dylib ## Referenced from: /Library/Frameworks/R.framework/Resources/modules//R_X11.so ## Reason: image not found ## Could not load tcltk. Will use slower R code instead. ## Loading required package: RSQLite library(ggplot2) We’ll be taking a look at team homerun totals for MLB teams in 1980 (too bad we’re not doing it on 2017 because we’d be seeing the Yankees at the top!</description>
+    </item>
+    
+  </channel>
+</rss>

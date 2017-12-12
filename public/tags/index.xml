@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Jeremy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://hugo.spf13.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bar plots</title>
+      <link>http://hugo.spf13.com/tags/bar-plots/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/tags/bar-plots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data visualization</title>
+      <link>http://hugo.spf13.com/tags/data-visualization/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Histogram</title>
+      <link>http://hugo.spf13.com/tags/histogram/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/tags/histogram/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Plot</title>
@@ -41,9 +68,27 @@
     <item>
       <title>SQL</title>
       <link>http://hugo.spf13.com/tags/sql/</link>
-      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>http://hugo.spf13.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scatterplot</title>
+      <link>http://hugo.spf13.com/tags/scatterplot/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/tags/scatterplot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time series</title>
+      <link>http://hugo.spf13.com/tags/time-series/</link>
+      <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://hugo.spf13.com/tags/time-series/</guid>
       <description></description>
     </item>
     
